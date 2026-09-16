@@ -294,9 +294,19 @@
   };
 
   Paginate.prototype.place = function (group) {
+    var first = group[0];
+
+    // Keep the TOC page dedicated: start major sections on the next page.
+    if (
+      first.matches("h2.major") &&
+      this.hasContent() &&
+      this.page.content.querySelector(".toc-entry")
+    ) {
+      this.startNextPage();
+    }
+
     if (this.fits(group)) return;
 
-    var first = group[0];
     if (first.matches("table")) {
       this.splitTable(first, group[1] || null);
       return;
