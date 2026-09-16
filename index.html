@@ -334,6 +334,15 @@
             color: #000000
         }
 
+        table.cols-6 {
+            font-size: 8.8px
+        }
+
+        table.cols-6 td,
+        table.cols-6 th {
+            padding: 4px 5px
+        }
+
         table.cols-7 {
             font-size: 8.6px
         }
@@ -592,11 +601,11 @@
             id="print" type="button">Imprimir / Salvar PDF</button>
     </header>
     <nav class="sidebar" aria-label="Sumário">
-        <h2>Neste documento</h2><a href="#sec-1">1. Visão executiva</a><a href="#sec-2">2. Organização do portfólio e
-            dependências críticas</a><a href="#sec-3">3. Inventário do portfólio</a><a href="#sec-4">4. Stack
-            tecnológica e versões</a><a href="#sec-5">5. Arquitetura transversal</a><a href="#sec-6">6. Distribuição em
-            nuvem AWS</a><a href="#sec-7">7. Bancos, arquivos e fluxos de dados</a><a href="#sec-8">8. Fichas técnicas
-            por plataforma</a><a href="#sec-9">9. Projetos em desenvolvimento no Programa de Estágio</a><a href="#sec-10">10. Entrega de software, qualidade e operação</a><a href="#sec-11">11.
+        <h2>Neste documento</h2><a href="#sec-1">1. Visão executiva</a><a href="#sec-2">2. Situação do portfólio</a><a href="#sec-3">3. Organização do portfólio e
+            dependências críticas</a><a href="#sec-4">4. Inventário do portfólio</a><a href="#sec-5">5. Stack
+            tecnológica e versões</a><a href="#sec-6">6. Arquitetura transversal</a><a href="#sec-7">7. Distribuição em
+            nuvem AWS</a><a href="#sec-8">8. Bancos, arquivos e fluxos de dados</a><a href="#sec-9">9. Fichas técnicas
+            por plataforma</a><a href="#sec-10">10. Entrega de software, qualidade e operação</a><a href="#sec-11">11.
             Agenda de decisões para a diretoria</a><a href="#sec-13">Anexo — Fontes e critérios de leitura</a>
     </nav>
     <main id="pages" aria-label="Relatório técnico"></main>
@@ -611,16 +620,18 @@
     <div id="source">
                 <h2 class="toc-title">Sumário</h2>
                 <a class="toc-entry" href="#sec-1"><span>1. Visão executiva</span><span
-                        data-toc="sec-1">02</span></a><a class="toc-entry" href="#sec-2"><span>2. Organização do
-                        portfólio e dependências críticas</span><span data-toc="sec-2">03</span></a><a class="toc-entry"
-                    href="#sec-3"><span>3. Inventário do portfólio</span><span data-toc="sec-3">04</span></a><a
-                    class="toc-entry" href="#sec-4"><span>4. Stack tecnológica e versões</span><span
-                        data-toc="sec-4">05</span></a><a class="toc-entry" href="#sec-5"><span>5. Arquitetura
-                        transversal</span><span data-toc="sec-5">07</span></a><a class="toc-entry"
-                    href="#sec-6"><span>6. Distribuição em nuvem AWS</span><span data-toc="sec-6">08</span></a><a
-                    class="toc-entry" href="#sec-7"><span>7. Bancos, arquivos e fluxos de dados</span><span
-                        data-toc="sec-7">09</span></a><a class="toc-entry" href="#sec-8"><span>8. Fichas técnicas por
-                        plataforma</span><span data-toc="sec-8">11</span></a><a class="toc-entry" href="#sec-9"><span>9. Projetos em desenvolvimento no Programa de Estágio</span><span data-toc="sec-9">20</span></a><a class="toc-entry" href="#sec-10"><span>10.
+                        data-toc="sec-1">02</span></a><a class="toc-entry" href="#sec-2"><span>2. Situação do
+                        portfólio</span><span data-toc="sec-2">03</span></a><a class="toc-entry"
+                    href="#sec-3"><span>3. Organização do portfólio e dependências críticas</span><span
+                        data-toc="sec-3">03</span></a><a class="toc-entry"
+                    href="#sec-4"><span>4. Inventário do portfólio</span><span data-toc="sec-4">04</span></a><a
+                    class="toc-entry" href="#sec-5"><span>5. Stack tecnológica e versões</span><span
+                        data-toc="sec-5">05</span></a><a class="toc-entry" href="#sec-6"><span>6. Arquitetura
+                        transversal</span><span data-toc="sec-6">07</span></a><a class="toc-entry"
+                    href="#sec-7"><span>7. Distribuição em nuvem AWS</span><span data-toc="sec-7">08</span></a><a
+                    class="toc-entry" href="#sec-8"><span>8. Bancos, arquivos e fluxos de dados</span><span
+                        data-toc="sec-8">09</span></a><a class="toc-entry" href="#sec-9"><span>9. Fichas técnicas por
+                        plataforma</span><span data-toc="sec-9">11</span></a><a class="toc-entry" href="#sec-10"><span>10.
                         Entrega de software, qualidade e operação</span><span data-toc="sec-10">22</span></a><a
                     class="toc-entry" href="#sec-11"><span>11. Agenda de decisões para a diretoria</span><span
                         data-toc="sec-11">23</span></a><a
@@ -632,21 +643,33 @@
                     oferecer um panorama técnico para decisões de arquitetura, operação, evolução e
                     investimento<br><strong>Classificação sugerida:</strong> uso interno</p>
                 <h2 id="sec-1" class="major"><strong>1. Visão executiva</strong></h2>
-                <p class="">O portfólio mapeado reúne <strong>16 plataformas e conjuntos de serviços</strong> que
-                    sustentam gestão interna, inteligência de oportunidades, relacionamento com a comunidade, produção
-                    editorial, elaboração de projetos com IA e acesso corporativo. Desse total, <strong>14 compõem o
-                    portfólio regular</strong> e <strong>2 estão em desenvolvimento no Programa de Estágio</strong> —
-                    Painel Instituições / Central de Inteligência Institucional e Monitoramento de Faturamento. O Hub
-                    referencia também o Cronograma Inovação, cuja arquitetura permanece a complementar. Os sistemas do
-                    portfólio regular estão organizados em 15 repositórios, com alguns projetos sendo monolitos e outros
-                    com divisões mais claras com sepração do back-end e do fornt-end, como o sistema da GoPRO e a
-                    EscreveAI.</p>
+                <p class="">O portfólio da Innovatis reúne sistemas em diferentes estágios de maturidade operacional.
+                    Parte das plataformas encontra-se em produção, enquanto <strong>quatro soluções estão atualmente
+                    classificadas como em desenvolvimento ou implantação</strong>: Painel Instituições / Central de
+                    Inteligência Institucional, Monitoramento de Faturamento, Esplanada 4.0 e Sistema de Gestão de
+                    Cobranças. Os dois primeiros são desenvolvidos no âmbito do Programa de Estágio, enquanto Esplanada
+                    4.0 e Gestão de Cobranças integram iniciativas internas do portfólio tecnológico da Innovatis. A
+                    origem (portfólio interno ou Programa de Estágio) descreve governança, não o capítulo em que o
+                    sistema aparece.</p>
+                <p class="">O levantamento cobre <strong>18 sistemas e conjuntos de serviços</strong> — gestão interna,
+                    inteligência de oportunidades, relacionamento com a comunidade, produção editorial, elaboração de
+                    projetos com IA, gestão de recebíveis, acompanhamento do cronograma de Tecnologia e acesso
+                    corporativo. Os repositórios localizados somam 17 (Monitoramento de Faturamento sem repositório
+                    identificado neste levantamento). Alguns projetos são monolitos; outros separam back-end e
+                    front-end, como GoPro, EscreveAI e o Gestão de Cronograma. O Gestão de Cobranças é sistema interno de
+                    gestão financeira e de recebíveis dos HUBs IFES e GOV, com base transacional em Supabase/PostgreSQL
+                    e Google Sheets como fonte legada. O Gestão de Cronograma consolida o acompanhamento gerencial das
+                    iniciativas de Tecnologia (sistemas, sprints, tarefas, responsáveis, prioridades e entregas), com
+                    dados parcialmente definidos em código e integração parcial com o ClickUp.</p>
                 <p class="">A base predominante das interfaces é <strong>React com Next.js e TypeScript</strong>. Há
-                    dois frontends React/Vite, APIs Python/FastAPI, duas APIs Java/Spring Boot e um ETL Python sem
-                    interface web. PostgreSQL é a principal tecnologia de persistência. A EscreveAI documenta, no
-                    repositório, uma base de conhecimento em Aurora do RDS com recuperação completa por RAG, distinta do
-                    RDS corporativo. O Esplanada 4.0 introduz DynamoDB, e Google Sheets é uma fonte operacional
-                    relevante para indicadores e integrações comerciais.</p>
+                    três frontends React/Vite (DBEM, Innova Books e Gestão de Cronograma), o Painel Instituições em
+                    TanStack Start/Vite, APIs Python/FastAPI, duas APIs Java/Spring Boot e um ETL Python sem interface
+                    web. PostgreSQL é a principal tecnologia de persistência, incluindo o projeto Supabase do Gestão de
+                    Cobranças; no Gestão de Cronograma, o PostgreSQL identificado atende autenticação, não a persistência
+                    principal das atividades. A EscreveAI documenta, no repositório, uma base de conhecimento em Aurora
+                    do RDS com recuperação completa por RAG, distinta do RDS corporativo. O Esplanada 4.0 introduz
+                    DynamoDB, e Google Sheets é uma fonte operacional relevante para indicadores, integrações comerciais
+                    e, no Gestão de Cobranças, como origem legada ainda parcialmente sincronizada.</p>
                 <p class="">A infraestrutura documentada utiliza principalmente Docker em AWS EC2, imagens no
                         ECR e bancos no RDS e o banco de dados do Aurora. A SAEP também possui
                     processamento em ECS Fargate acionado por Lambda a partir de eventos S3. Parte das
@@ -654,8 +677,12 @@
 <p class="">A identidade é uma dependência transversal: o Hub e seu broker OIDC, o
                     Amazon Cognito e o cadastro compartilhado de usuários em
                         PostgreSQL participam da evolução para autenticação centralizada. A transição para SSO
-                    mantém caminhos legados e híbridos, enquanto o GoPro possui autenticação própria. Essa coexistência
-                    aumenta o esforço para administrar permissões, revogação e experiência de acesso entre produtos.
+                    mantém caminhos legados e híbridos, enquanto o GoPro e o Gestão de Cronograma possuem autenticação
+                    própria. O Gestão de Cronograma apoia-se no cadastro PostgreSQL corporativo, bcrypt e JWT HS256, sem
+                    o broker OIDC/Cognito como fluxo principal. Essa coexistência aumenta o esforço para administrar
+                    permissões, revogação e experiência de acesso entre produtos. O Gestão de Cobranças não integra o
+                    contrato OIDC corporativo neste levantamento: autorização ocorre por papéis no próprio Supabase
+                    (viewer, operator e master_admin), com RLS e revalidação nas RPCs.
                 </p>
                 <h3 class=""><strong>Leitura para decisões da diretoria</strong></h3>
                 <p class=""> 
@@ -678,7 +705,8 @@
                     <tbody>
                         <tr>
                             <td>Identidade</td>
-                            <td>Hub/broker, Cognito e PostgreSQL compartilhado atendem vários produtos</td>
+                            <td>Hub/broker, Cognito e PostgreSQL compartilhado atendem vários produtos; GoPro e Gestão de
+                                Cronograma usam autenticação própria (o segundo, JWT sobre o cadastro corporativo)</td>
                             <td>Formalizar identidade como serviço corporativo</td>
                         </tr>
                         <tr>
@@ -694,13 +722,15 @@
                         </tr>
                         <tr>
                             <td>Stack</td>
-                            <td>React/Next domina o frontend; Python atende dados/IA — inclusive o RAG da EscreveAI — e
-                                Java atende APIs de gestão</td>
+                            <td>React/Next domina o frontend; há SPAs React/Vite; Python atende dados/IA — inclusive o
+                                RAG da EscreveAI — e a API do Gestão de Cronograma; Java atende APIs de gestão</td>
                             <td>Padronizar runtimes, deploy e observabilidade</td>
                         </tr>
                         <tr>
                             <td>Informação gerencial</td>
-                            <td>Indicadores depende de Sheets; SAEP e Editais dependem de ingestão e processamento</td>
+                            <td>Indicadores depende de Sheets; SAEP e Editais dependem de ingestão; Gestão de Cobranças
+                                trata Sheets como fonte legada com sincronização ainda parcial; Gestão de Cronograma
+                                combina dados em código e ClickUp parcial</td>
                             <td>Monitorar qualidade e atualização dos dados</td>
                         </tr>
                         <tr>
@@ -711,13 +741,77 @@
                         </tr>
                         <tr>
                             <td>Evolução de produto</td>
-                            <td>GoPro tem módulos parciais; Esplanada tem infraestrutura ainda em implantação</td>
-                            <td>Priorizar estabilização antes de novas funcionalidades</td>
+                            <td>GoPro tem módulos parciais; Esplanada, Gestão de Cobranças e os dois sistemas do
+                                Programa de Estágio ainda não são produção consolidada</td>
+                            <td>Priorizar estabilização e critérios de entrada em produção</td>
                         </tr>
                     </tbody>
                 </table>
-                <h2 id="sec-2" class="major"><strong>2. Organização do portfólio e dependências críticas</strong></h2>
-                <h3 class=""><strong>2.1 Capacidades atendidas</strong></h3>
+                <h2 id="sec-2" class="major"><strong>2. Situação do portfólio</strong></h2>
+                <p class="">Produção, evolução, implantação, desenvolvimento ou ausência de verificação são
+                    <strong>atributos de cada sistema</strong>, não motivo para capítulos separados. A ficha técnica
+                    descreve arquitetura e dados; esta seção resume o estágio operacional para a diretoria. O detalhe
+                    por produto está no inventário (seção 4) e nas fichas (seção 9).</p>
+                <p class=""><strong>Produção:</strong> Hub e broker, Admin Console, Nexus, SAEP, DBEM, Comunidade
+                    InnovaNation, Central de Editais e a integração Pipedrive → Sheets — com releases, hosts ou rotinas
+                    operacionais documentados neste levantamento.</p>
+                <p class=""><strong>Produção / evolução:</strong> GoPro (módulos ainda parciais), Indicadores 2026
+                    (dependência de planilhas e histórico de healthcheck), Innova Coin e Innova Books (host ou rotina
+                    operacional a completar), EscreveAI (host, release e modelos produtivos não confirmados) e Gestão de
+                    Cronograma (frontend containerizado; implantação do backend, reverse proxy <code>/api</code>, host e
+                    release produtivos ainda precisam ser confirmados).</p>
+                <p class=""><strong>Homologação / implantação:</strong> Esplanada 4.0 já possui login, árvore
+                    organizacional, histórico e pendências, mas autenticação produtiva e provisionamento completo dos
+                    serviços ainda não estão concluídos. Não deve ser apresentado como produção consolidada.</p>
+                <h3 class=""><strong>Sistemas em desenvolvimento</strong></h3>
+                <p class="">Quatro soluções estão classificadas como em desenvolvimento ou implantação. Painel
+                    Instituições e Monitoramento de Faturamento pertencem ao Programa de Estágio (concepção e código
+                    sob as equipes de estagiários, com apoio consultivo dos demais colaboradores). Esplanada 4.0 e
+                    Gestão de Cobranças são iniciativas internas do portfólio Innovatis.</p>
+                <table data-table="16" class="cols-4">
+                    <colgroup>
+                        <col style="width:24%">
+                        <col style="width:22%">
+                        <col style="width:26%">
+                        <col style="width:28%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col"><strong>Sistema</strong></th>
+                            <th scope="col"><strong>Origem</strong></th>
+                            <th scope="col"><strong>Status atual</strong></th>
+                            <th scope="col"><strong>Principal pendência</strong></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Painel Instituições</td>
+                            <td>Programa de Estágio</td>
+                            <td>Em desenvolvimento</td>
+                            <td>Consolidação funcional e entrada em produção</td>
+                        </tr>
+                        <tr>
+                            <td>Monitoramento de Faturamento</td>
+                            <td>Programa de Estágio</td>
+                            <td>Em desenvolvimento</td>
+                            <td>Conclusão do produto e levantamento técnico</td>
+                        </tr>
+                        <tr>
+                            <td>Esplanada 4.0</td>
+                            <td>Portfólio Innovatis</td>
+                            <td>Em desenvolvimento / implantação</td>
+                            <td>Autenticação produtiva e provisionamento completo</td>
+                        </tr>
+                        <tr>
+                            <td>Gestão de Cobranças</td>
+                            <td>Portfólio Innovatis</td>
+                            <td>Em desenvolvimento</td>
+                            <td>Finalização da integração e sincronização com Google Sheets</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2 id="sec-3" class="major"><strong>3. Organização do portfólio e dependências críticas</strong></h2>
+                <h3 class=""><strong>3.1 Capacidades atendidas</strong></h3>
                 <table data-table="2" class="cols-3">
                     <colgroup>
                         <col style="width:21%">
@@ -739,13 +833,22 @@
                         </tr>
                         <tr>
                             <td>Inteligência territorial, prospecção de recursos e oportunidades</td>
-                            <td>Nexus, SAEP, Central de Editais e Esplanada</td>
-                            <td>Organizam território, recursos públicos, editais e estrutura governamental</td>
+                            <td>Nexus, SAEP, Central de Editais, Esplanada e Painel Instituições</td>
+                            <td>Organizam território, recursos públicos, editais, estrutura governamental e instituições
+                                parceiras</td>
                         </tr>
                         <tr>
                             <td>Gestão e acompanhamento</td>
-                            <td>GoPro, Indicadores, DBEM e Innova Coin</td>
-                            <td>Apoiam execução de contratos, metas, análise gerencial e bonificações</td>
+                            <td>GoPro, Indicadores, DBEM, Innova Coin, Gestão de Cobranças e Monitoramento de
+                                Faturamento</td>
+                            <td>Apoiam execução de contratos, metas, análise gerencial, bonificações, recebíveis e
+                                faturamento</td>
+                        </tr>
+                        <tr>
+                            <td>Gestão de portfólio e execução tecnológica</td>
+                            <td>Gestão de Cronograma</td>
+                            <td>Consolida visão gerencial de sistemas, sprints, tarefas, responsáveis, prioridades e
+                                entregas do setor de Tecnologia</td>
                         </tr>
                         <tr>
                             <td>Relacionamento e submissões</td>
@@ -806,14 +909,15 @@
                         </tr>
                         <tr>
                             <td>Hosts EC2 compartilhados</td>
-                            <td>Grupos de aplicações descritos na seção 6</td>
+                            <td>Grupos de aplicações descritos na seção 7</td>
                             <td>Manutenção, saturação ou falha do host pode afetar vários serviços</td>
                             <td>Dimensionar e isolar a partir de carga e criticidade, não apenas do número de sistemas
                             </td>
                         </tr>
                         <tr>
                             <td>Fontes externas e pipelines</td>
-                            <td>SAEP, Editais, Esplanada, Indicadores, ETL comercial e EscreveAI</td>
+                            <td>SAEP, Editais, Esplanada, Indicadores, ETL comercial, EscreveAI, Gestão de Cobranças e
+                                Gestão de Cronograma</td>
                             <td>Dados defasados ou contexto de geração indisponível mesmo com site disponível</td>
                             <td>Definir indicadores de atualização, alertas e reprocessamento</td>
                         </tr>
@@ -837,6 +941,14 @@
                             <td>Funções específicas dependem de serviço externo, cotas e configuração</td>
                             <td>Atribuir responsabilidade por contas, consumo e continuidade funcional</td>
                         </tr>
+                        <tr>
+                            <td>API ClickUp</td>
+                            <td>Gestão de Cronograma (cobertura parcial: GoPro2, EscreveAI e Innova Coin)</td>
+                            <td>Indisponibilidade ou mudança de lista/status no ClickUp altera o dashboard das iniciativas
+                                integradas; as demais permanecem nos dados definidos em código</td>
+                            <td>Não tratar a API como fonte única de verdade do cronograma; acompanhar cache e cobertura
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
                 <p class="">O alcance técnico de uma dependência não deve ser interpretado automaticamente como prioridade de negócio. A classificação final deve 
@@ -844,28 +956,30 @@
                     recuperação. A prioridade de cada plataforma deve, portanto, ser validada conjuntamente com a diretoria e os responsáveis de negócio, e não 
                     inferida apenas a partir da stack, do tamanho do sistema ou da quantidade de dependências.
                 </p>
-                <h2 id="sec-3" class="major"><strong>3. Inventário do portfólio</strong></h2>
+                <h2 id="sec-4" class="major"><strong>4. Inventário do portfólio</strong></h2>
                 <p>
                     O inventário abaixo consolida os sistemas identificados no portfólio da Innovatis, seus respectivos repositórios, finalidade principal, 
-                    estrutura de aplicação e mecanismo predominante de persistência. O objetivo desta visão não é apenas registrar tecnologias, mas evidenciar 
-                    padrões recorrentes de arquitetura, dependências compartilhadas e exceções relevantes entre as plataformas.
+                    estrutura de aplicação, persistência e <strong>status operacional</strong>. O estágio (produção, evolução, implantação, desenvolvimento ou
+                    não verificado) é um atributo do sistema; a origem (portfólio interno ou Programa de Estágio) não o retira desta tabela.
                 </p>
                 <p>
                     A maior parte do portfólio é composta por aplicações web com frontend em React/Next.js e serviços de backend integrados na própria aplicação ou 
-                    separados em APIs Python/FastAPI e Java/Spring Boot. PostgreSQL é a tecnologia de persistência predominante, enquanto S3, Google Sheets, DynamoDB 
-                    e bases especializadas aparecem conforme a natureza de cada produto. Essa composição já é apontada na visão executiva do relatório.
+                    separados em APIs Python/FastAPI e Java/Spring Boot. PostgreSQL é a tecnologia de persistência predominante, enquanto S3, Google Sheets, DynamoDB,
+                    Supabase, ClickUp (cobertura parcial no Gestão de Cronograma) e bases especializadas aparecem conforme a natureza de cada produto. Essa composição já é apontada na visão executiva do relatório.
                 </p>
-                <table data-table="4" class="cols-5">
+                <table data-table="4" class="cols-6">
                     <colgroup>
-                        <col style="width:19%">
+                        <col style="width:16%">
+                        <col style="width:16%">
+                        <col style="width:15%">
                         <col style="width:18%">
-                        <col style="width:21%">
-                        <col style="width:23%">
-                        <col style="width:19%">
+                        <col style="width:18%">
+                        <col style="width:17%">
                     </colgroup>
                     <thead>
                         <tr>
                             <th scope="col"><strong>Sistema / conjunto</strong></th>
+                            <th scope="col"><strong>Status operacional</strong></th>
                             <th scope="col"><strong>Repositório ou diretório</strong></th>
                             <th scope="col"><strong>Finalidade</strong></th>
                             <th scope="col"><strong>Estrutura principal</strong></th>
@@ -875,6 +989,7 @@
                     <tbody>
                         <tr>
                             <td>Hub Innovatis + autenticação central</td>
+                            <td>Produção</td>
                             <td>hub-innovatis</td>
                             <td>Portal de acesso, catálogo por permissões, sessões e broker OIDC</td>
                             <td>Next.js + serviço Express/OIDC + Lambdas + Terraform</td>
@@ -882,6 +997,7 @@
                         </tr>
                         <tr>
                             <td>Admin Console</td>
+                            <td>Produção</td>
                             <td>Admin-Console</td>
                             <td>Administração de usuários, convites, permissões geográficas e atividade</td>
                             <td>Next.js full-stack</td>
@@ -889,6 +1005,7 @@
                         </tr>
                         <tr>
                             <td>Nexus</td>
+                            <td>Produção</td>
                             <td>projeto-nexus</td>
                             <td>Inteligência territorial, municípios, polos, relacionamentos e rotas</td>
                             <td>Next.js full-stack, mapas e processamento no navegador</td>
@@ -896,6 +1013,7 @@
                         </tr>
                         <tr>
                             <td>SAEP</td>
+                            <td>Produção</td>
                             <td>saep</td>
                             <td>Análise de emendas parlamentares e classificação de oportunidades</td>
                             <td>Next.js + FastAPI + coleta + processamento em lote</td>
@@ -903,6 +1021,7 @@
                         </tr>
                         <tr>
                             <td>DBEM</td>
+                            <td>Produção</td>
                             <td>dbem</td>
                             <td>Acesso autenticado a dashboards Power BI</td>
                             <td>React/Vite + Spring Boot</td>
@@ -910,6 +1029,7 @@
                         </tr>
                         <tr>
                             <td>GoPro</td>
+                            <td>Produção / evolução</td>
                             <td>gopro-completo/projet-gopro2 e gopro-completo/api_gopro</td>
                             <td>Gestão de contratos, projetos, execução financeira e documentos</td>
                             <td>Next.js/BFF + Spring Boot</td>
@@ -917,6 +1037,7 @@
                         </tr>
                         <tr>
                             <td>Indicadores 2026</td>
+                            <td>Produção / evolução</td>
                             <td>indicadores_2026</td>
                             <td>KPIs corporativos, metas e funil comercial</td>
                             <td>Next.js full-stack</td>
@@ -924,6 +1045,7 @@
                         </tr>
                         <tr>
                             <td>Comunidade InnovaNation</td>
+                            <td>Produção / evolução</td>
                             <td>lp-comunidade</td>
                             <td>Inscrições, propostas de edital e avaliação administrativa</td>
                             <td>Next.js full-stack</td>
@@ -931,6 +1053,7 @@
                         </tr>
                         <tr>
                             <td>Innova Coin</td>
+                            <td>Produção / evolução</td>
                             <td>innova-coin</td>
                             <td>Acompanhamento de bonificações de heads e colaboradores</td>
                             <td>Next.js full-stack</td>
@@ -938,6 +1061,7 @@
                         </tr>
                         <tr>
                             <td>Innova Books</td>
+                            <td>Produção </td>
                             <td>innova-books</td>
                             <td>Conversão de relatórios PDF em ebooks e exportação</td>
                             <td>React/Vite + FastAPI + IA</td>
@@ -945,6 +1069,7 @@
                         </tr>
                         <tr>
                             <td>Central de Editais</td>
+                            <td>Produção</td>
                             <td>prosas-teste</td>
                             <td>Coleta de editais, monitoramento, classificação e similaridade</td>
                             <td>Next.js + FastAPI + worker + serviço de similaridade</td>
@@ -952,6 +1077,7 @@
                         </tr>
                         <tr>
                             <td>Esplanada 4.0</td>
+                            <td>Em desenvolvimento</td>
                             <td>esplanada-4.0</td>
                             <td>Organograma federal e consolidação de fontes públicas</td>
                             <td>Monorepo pnpm: Next.js, handlers TypeScript, sync Python, CDK</td>
@@ -960,6 +1086,7 @@
                         </tr>
                         <tr>
                             <td>Integração Pipedrive → Sheets</td>
+                            <td>Produção</td>
                             <td>api-pipedrive-gv</td>
                             <td>Sincronização comercial diária</td>
                             <td>CLI/ETL Python</td>
@@ -967,15 +1094,45 @@
                         </tr>
                         <tr>
                             <td>EscreveAI</td>
+                            <td>Produção / evolução</td>
                             <td>escreve-ai</td>
                             <td>Elaboração e redação de projetos com IA e RAG sobre projetos já executados</td>
-                            <td>Monorepo: Next.js (apps/escreve-ai) + FastAPI (apps/backend-ia)</td>
+                            <td>Monorepo: Next.js (apps/front-end) + FastAPI (apps/backend-ia)</td>
                             <td>Aurora do RDS com recuperação via similaridade do cosseno</td>
                         </tr>
                         <tr>
-                            <td>Cronograma Inovação</td>
-                            <td><strong>Repositório não localizado</strong></td>
-                            <td>Plataforma referenciada no catálogo do Hub</td>
+                            <td>Gestão de Cobranças</td>
+                            <td>Em desenvolvimento</td>
+                            <td>gestao_cobrancas</td>
+                            <td>Gestão de recebíveis dos HUBs IFES e GOV, com competência mensal e governança
+                                transacional</td>
+                            <td>Next.js + Supabase/PostgreSQL + Edge Functions</td>
+                            <td>PostgreSQL/Supabase como base operacional; Google Sheets como fonte legada/integrada
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Painel Instituições</td>
+                            <td>Em desenvolvimento</td>
+                            <td>painel-instituicoes</td>
+                            <td>Organização e análise comparativa de instituições parceiras (GOVs e IFEs)</td>
+                            <td>TanStack Start/React + Vite (não Next.js)</td>
+                            <td>PostgreSQL (TEMQV); Nexus só para autenticação leitura</td>
+                        </tr>
+                        <tr>
+                            <td>Gestão de Cronograma</td>
+                            <td>Produção / evolução</td>
+                            <td>dashboard-atividades</td>
+                            <td>Acompanhamento gerencial de atividades, sprints e entregas do setor de Tecnologia</td>
+                            <td>SPA React/Vite + API REST FastAPI</td>
+                            <td>PostgreSQL corporativo para autenticação; cronograma parcialmente em código; ClickUp
+                                parcial</td>
+                        </tr>
+                        <tr>
+                            <td>Monitoramento de Faturamento</td>
+                            <td>Em desenvolvimento</td>
+                            <td><strong>Repositório não disponível neste levantamento</strong></td>
+                            <td>Monitoramento de faturamento interno</td>
                             <td>Não verificado</td>
                             <td>Não verificado</td>
                         </tr>
@@ -988,9 +1145,13 @@
                     inspecionados.
                 </p>
                 <p>
-                    O inventário não possui o mesmo grau de completude para todos os produtos. O caso mais evidente é o Cronograma Inovação, cujo repositório, 
-                    stack, persistência e hospedagem ainda não foram verificados. Essas lacunas devem permanecer explicitamente registradas para evitar que ausência 
-                    de evidência seja interpretada como ausência de infraestrutura ou de dependências.
+                    O inventário não possui o mesmo grau de completude para todos os produtos. Monitoramento de
+                    Faturamento permanece sem repositório verificado neste levantamento. O Gestão de Cronograma possui
+                    repositório e stack identificados, mas a origem das atividades ainda é heterogênea e a hospedagem do
+                    backend não foi confirmada. Esplanada 4.0, Gestão de Cobranças e o Painel Instituições constam com
+                    stack identificada, mas ainda não como produção consolidada. Essas lacunas devem permanecer explícitas
+                    para evitar que ausência de evidência seja interpretada como ausência de infraestrutura ou como
+                    operação já estabilizada.
                 </p>
                 <h3 class=""><strong>Relatórios executivos vinculados</strong></h3>
                 <p>
@@ -1088,8 +1249,8 @@
                         </tr>
                     </tbody>
                 </table>
-                <h2 id="sec-4" class="major"><strong>4. Stack tecnológica e versões</strong></h2>
-                <h3 class=""><strong>4.1 Interfaces e serviços Node.js</strong></h3>
+                <h2 id="sec-5" class="major"><strong>5. Stack tecnológica e versões</strong></h2>
+                <h3 class=""><strong>5.1 Interfaces e serviços Node.js</strong></h3>
                 <p class="">Versões de frameworks e bibliotecas consolidadas a partir dos arquivos de dependências. A
                     coluna runtime descreve a configuração de empacotamento das aplicações; detalhes metodológicos estão
                     no anexo.</p>
@@ -1234,12 +1395,39 @@
                         </tr>
                         <tr>
                             <td>EscreveAI frontend</td>
-                            <td>—</td>
+                            <td>0.1.0</td>
                             <td>Next 16.2.3 (App Router / Turbopack)</td>
-                            <td>19</td>
-                            <td>TypeScript declarado</td>
-                            <td>Tailwind 4; shadcn/ui</td>
-                            <td>apps/escreve-ai; empacotamento produtivo a confirmar</td>
+                            <td>19.2.4</td>
+                            <td>5.9.3</td>
+                            <td>Tailwind 4.3.3; shadcn/Base UI</td>
+                            <td>apps/front-end; Docker Node 20-bookworm-slim; npm 11.6.2; Next standalone, porta 3000</td>
+                        </tr>
+                        <tr>
+                            <td>Gestão de Cobranças</td>
+                            <td>0.1.0</td>
+                            <td>Next 15.5.25</td>
+                            <td>19.2.8</td>
+                            <td>5.9.3</td>
+                            <td>Tailwind 4.3.3; shadcn/Base UI</td>
+                            <td>App Router; Node não fixado no package.json; Docker do frontend não identificado</td>
+                        </tr>
+                        <tr>
+                            <td>Painel Instituições</td>
+                            <td>Não declarada</td>
+                            <td>TanStack Start 1.168.32; Vite 8.2.1 (não é Next.js)</td>
+                            <td>19.2.8</td>
+                            <td>5.9.3</td>
+                            <td>Tailwind 4.3.3; Radix UI</td>
+                            <td>Vite exige Node ^20.19 ou &gt;=22.12; em desenvolvimento (Programa de Estágio)</td>
+                        </tr>
+                        <tr>
+                            <td>Gestão de Cronograma</td>
+                            <td>1.0.0</td>
+                            <td>Vite 5.4.21; React Router DOM 6.30.3; JavaScript/JSX (não é Next.js)</td>
+                            <td>18.3.1</td>
+                            <td>Não (JavaScript/JSX)</td>
+                            <td>Lucide React</td>
+                            <td>Build Node 20-alpine; Nginx 1.27-alpine (SPA estática; proxy /api não está no Nginx do repositório)</td>
                         </tr>
                     </tbody>
                 </table>
@@ -1247,6 +1435,12 @@
                 <p class="list-item">Indicadores declara Next ^15.1.3, mas resolve <strong>15.5.6</strong>; o número
                     declarado não deve ser usado como versão exata.</p>
                 <p class="list-item">Esplanada declara Next ^15.1.0, mas resolve <strong>15.5.23</strong>.</p>
+                <p class="list-item">Gestão de Cobranças declara Next ^15.2.0, mas resolve <strong>15.5.25</strong>; o
+                    início da faixa semver não deve ser usado como versão instalada.</p>
+                <p class="list-item">Gestão de Cronograma declara Vite ^5.4.8 e React Router DOM ^6.26.2, mas resolve
+                    Vite <strong>5.4.21</strong> e React Router DOM <strong>6.30.3</strong>.</p>
+                <p class="list-item">Painel Instituições não declara propriedade <code>version</code> no
+                    <code>package.json</code> (name <code>tanstack_start_ts</code>).</p>
                 <p class="list-item">DBEM utiliza React <strong>19.2.1</strong> no lockfile, apesar do README mencionar
                     React 18. react e react-dom não aparecem como dependências diretas no manifesto inspecionado; estão
                     resolvidos na árvore de dependências.</p>
@@ -1255,7 +1449,7 @@
                 <p class="list-item">A diversidade de versões amplia a matriz de testes e manutenção. Uma política de
                     atualização deve considerar compatibilidade das aplicações, dependências nativas e requisitos de
                     cada runtime.</p>
-                <h3 class=""><strong>4.2 APIs, processamento e dependências estruturais</strong></h3>
+                <h3 class=""><strong>5.2 APIs, processamento e dependências estruturais</strong></h3>
                 <p>
                     As camadas de backend, processamento e automação apresentam maior heterogeneidade tecnológica do que o frontend do portfólio. 
                     Enquanto Java/Spring Boot aparece nas APIs de gestão e autenticação de GoPro e DBEM, Python concentra os workloads de dados, inteligência 
@@ -1367,18 +1561,44 @@
                                 &gt;=2.150,&lt;3; PyYAML &gt;=6,&lt;7; Tenacity &gt;=9,&lt;10</td>
                             <td>Intervalos limitados por major; sem versão única resolvida registrada</td>
                         </tr>
+                        <tr>
+                            <td>Gestão de Cobranças / Supabase</td>
+                            <td>PostgreSQL no projeto Supabase; Edge Functions</td>
+                            <td>Supabase client, RLS, RPCs SECURITY DEFINER, Zod, React Hook Form, Recharts, Vitest e
+                                XLSX; mutações via Server Actions</td>
+                            <td>Schema e políticas no projeto Supabase; host de produção não confirmado neste
+                                levantamento</td>
+                        </tr>
+                        <tr>
+                            <td>Painel Instituições</td>
+                            <td>TypeScript / TanStack Start 1.168.32; Vite 8.2.1</td>
+                            <td>PostgreSQL TEMQV; autenticação JWT contra Nexus (somente leitura); React 19.2.8;
+                                TypeScript 5.9.3</td>
+                            <td>Em desenvolvimento; schema de produção a consolidar</td>
+                        </tr>
+                        <tr>
+                            <td>Gestão de Cronograma API</td>
+                            <td>Python; Uvicorn</td>
+                            <td>FastAPI; Pydantic 2; psycopg 3; python-jose; bcrypt; python-dotenv. Modelos, métricas e
+                                endpoints concentrados em main.py</td>
+                            <td>Diretórios frontend/ e backend/; lockfile Python equivalente ao npm não destacado nesta
+                                versão</td>
+                        </tr>
                     </tbody>
                 </table>
 <p class=""><strong>Dependências transversais:</strong> autenticação JOSE/OIDC e bcrypt; acesso
-                    PostgreSQL por pg, Prisma, Drizzle, psycopg, SQLAlchemy e JPA; AWS SDKs JavaScript/Python/Java;
+                    PostgreSQL por pg, Prisma, Drizzle, psycopg, SQLAlchemy, JPA e o cliente Supabase; AWS SDKs JavaScript/Python/Java;
                     geração PDF por bibliotecas diferentes. Essa diversidade exige cuidado com contratos de dados e
                     identidade, mesmo onde a interface usa a mesma stack.</p>
-                <h2 id="sec-5" class="major"><strong>5. Arquitetura transversal</strong></h2>
-                <h3 class=""><strong>5.1 Organização dos sistemas</strong></h3>
+                <h2 id="sec-6" class="major"><strong>6. Arquitetura transversal</strong></h2>
+                <h3 class=""><strong>6.1 Organização dos sistemas</strong></h3>
                 <p class="">Não há um monorepo corporativo único. Predominam repositórios independentes com camadas de
                     UI e servidor reunidas no Next.js, além de serviços separados quando o domínio exige Python ou Java.
                     O Esplanada é um monorepo de pacotes; o GoPro é um agrupamento operacional de dois repositórios. A
-                    EscreveAI é um monorepo com frontend em apps/escreve-ai e backend de IA em apps/backend-ia.</p>
+                    EscreveAI é um monorepo com frontend em apps/front-end e backend de IA em apps/backend-ia. O Gestão
+                    de Cobranças concentra UI e regras no Next.js, com persistência e autorização no Supabase, sem API
+                    Java ou FastAPI própria. O Gestão de Cronograma separa SPA React/Vite e API FastAPI, com o backend
+                    relativamente monolítico em main.py (modelos, dados, integrações, métricas e endpoints).</p>
                 <figure class="diagram" data-diagram="central">
                     <figcaption>Arquitetura corporativa · identidade e domínios</figcaption><svg
                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 355" role="img"
@@ -1440,8 +1660,10 @@
                         transição híbrida preserva caminhos legados nas plataformas integradas.</p>
                 </figure>
                 <p class="">O diagrama apresenta a arquitetura lógica de acesso. Esplanada e o ETL não integram o
-                    contrato central descrito; o GoPro possui autenticação própria.</p>
-                <h3 class=""><strong>5.2 Identidade e autorização</strong></h3>
+                    contrato central descrito; o GoPro possui autenticação própria. O Gestão de Cronograma também usa
+                    autenticação própria (login no cadastro PostgreSQL corporativo e JWT HS256), sem o broker
+                    OIDC/Cognito como fluxo principal.</p>
+                <h3 class=""><strong>6.2 Identidade e autorização</strong></h3>
                 <p>
                     A identidade corporativa constitui uma dependência transversal do portfólio. O modelo atual combina Hub, broker OIDC, Amazon Cognito, 
                     persistência PostgreSQL e mecanismos próprios de sessão nas aplicações. Esse arranjo permite centralização progressiva da autenticação, 
@@ -1462,6 +1684,14 @@
                     hybrid, Cognito direto e broker aparecem em implementações e registros de diferentes momentos.</p>
                 <p class="list-item"><strong>GoPro:</strong> usuários e autorização próprios, sem client no contrato
                     OIDC atual.</p>
+                <p class="list-item"><strong>Gestão de Cronograma:</strong> login por username ou e-mail no cadastro
+                    PostgreSQL corporativo, verificação bcrypt, exigência de acesso à plataforma configurada e emissão
+                    de JWT HS256 (usuário, role, plataformas, emissão e expiração). O frontend guarda o token em
+                    sessionStorage e envia <code>Authorization: Bearer</code>. Não utiliza o broker OIDC/Cognito como
+                    fluxo principal.</p>
+                <p class="list-item"><strong>Gestão de Cobranças:</strong> papéis viewer, operator e master_admin no
+                    Supabase, com RLS e revalidação nas RPCs; não há client no contrato OIDC corporativo neste
+                    levantamento.</p>
                 <p class=""><strong>Dependência crítica:</strong> a disponibilidade do broker, do Cognito e do banco de
                     identidade pode afetar login ou continuidade de sessão de vários sistemas. O impacto exato depende
                     do modo de autenticação e da política de introspecção configurados em produção.</p>
@@ -1471,7 +1701,7 @@
                     concluir a centralização deve incluir revogação e logout cruzado, além do login único.</p>
                 <p class="reference">Fontes: estado do Hub, auditoria de redirects e logout, schema do broker, catálogo.
                 </p>
-                <h3 class=""><strong>5.3 Elaboração de projetos com RAG (EscreveAI)</strong></h3>
+                <h3 class=""><strong>6.3 Elaboração de projetos com RAG (EscreveAI)</strong></h3>
                 <p> A EscreveAI representa a principal aplicação do portfólio voltada à elaboração assistida de projetos com inteligência artificial e recuperação 
                     de contexto. Sua arquitetura separa a interface de edição do pipeline de IA, permitindo que frontend e backend evoluam de forma relativamente 
                     independente, ao mesmo tempo em que mantém uma cadeia de dependências necessária para que a geração funcione de ponta a ponta.                 
@@ -1497,8 +1727,34 @@
                     utiliza a api da Openai e Claude, enquanto o repositório também registra uso de
                     Llama 3.1 8B Instant via Groq em funções específicas para poder inferir títulos no pipeline de ingestão.
                 </p>
-                <h2 id="sec-6" class="major"><strong>6. Distribuição em nuvem AWS</strong></h2>
-                <h3 class=""><strong>6.1 Topologia documentada</strong></h3>
+                <h3 class=""><strong>6.4 Gestão de recebíveis (Gestão de Cobranças)</strong></h3>
+                <p class="">O Gestão de Cobranças opera um padrão distinto da maior parte do portfólio Next.js: a
+                    leitura passa por Server Components e serviços sobre views PostgreSQL no Supabase; as mutações
+                    passam por Server Actions que invocam RPCs SECURITY DEFINER. O frontend consulta o PostgreSQL e
+                    <strong>não lê a planilha diretamente</strong>. A abstração
+                    <code>ReceivablesSourceAdapter</code> desacopla a aplicação da fonte externa, permitindo tratar
+                    Google Sheets como origem legada atrás de Edge Functions, sem acoplar componentes React à estrutura
+                    de células.</p>
+                <p class="">A cadeia documentada é Google Sheets → Sheets API → Supabase Edge Functions →
+                    Supabase/PostgreSQL → Next.js. A sincronização bidirecional permanece parcialmente implementada
+                    (Fase 3): o health-check da integração existe; importação, inicialização, sincronização, resolução
+                    de conflitos e write-back ainda não devem ser apresentados como concluídos.</p>
+                <h3 class=""><strong>6.5 Acompanhamento de Tecnologia (Gestão de Cronograma)</strong></h3>
+                <p class="">O Gestão de Cronograma é uma camada de acompanhamento gerencial da execução tecnológica, e
+                    não um substituto transacional do ClickUp. A cadeia observada no repositório é SPA React/Vite 5.4.21 → API
+                    REST FastAPI → fontes de dados. O domínio interno é Software → Sprint → Task. O percentual
+                    principal de progresso é <strong>tarefas concluídas / total de tarefas × 100</strong> (percentual de
+                    tarefas concluídas); story points são apresentados à parte e não ponderam esse indicador.</p>
+                <p class="">As fontes são híbridas: parte dos softwares, sprints e tarefas está definida no código do
+                    backend; GoPro2, EscreveAI e Innova Coin possuem recuperação dinâmica no ClickUp (tarefas e
+                    subtarefas por lista, com normalização de status, prioridade, responsável, story points e datas, e
+                    cache em memória de cerca de cinco minutos). O PostgreSQL identificado autentica usuários; não é a
+                    persistência principal do cronograma. A cobertura ClickUp é parcial: não se afirma que todas as
+                    informações do dashboard sincronizam automaticamente. Descrições e stacks de outros sistemas
+                    presentes nesse backend <strong>não substituem</strong> os repositórios originais como fonte técnica
+                    das demais fichas.</p>
+                <h2 id="sec-7" class="major"><strong>7. Distribuição em nuvem AWS</strong></h2>
+                <h3 class=""><strong>7.1 Topologia documentada</strong></h3>
                 <p>
                     A infraestrutura documentada combina aplicações containerizadas em
                     instâncias EC2 compartilhadas, serviços gerenciados da AWS e componentes
@@ -1581,9 +1837,23 @@
                         </tr>
                         <tr>
                             <td><strong>EscreveAI</strong></td>
-                            <td>Frontend Next.js e backend FastAPI de IA</td>
+                            <td>Frontend Next.js (Docker Node 20-bookworm-slim, standalone) e backend FastAPI de IA</td>
                             <td>O repositório traz Docker, pasta infra/ e scripts; host produtivo não confirmado</td>
                             <td>Não tratar a estrutura de nuvem do repositório como implantação já em operação</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Gestão de Cobranças</strong></td>
+                            <td>Frontend Next.js com persistência no projeto Supabase</td>
+                            <td>Host EC2/produtivo não confirmado; Edge Functions e PostgreSQL no Supabase</td>
+                            <td>Não tratar o desenho documentado como implantação AWS já em operação; acompanhar
+                                defasagem banco–planilha</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Gestão de Cronograma</strong></td>
+                            <td>Frontend SPA em Nginx; API FastAPI</td>
+                            <td>Dockerfile do frontend (Node 20-alpine → Vite → Nginx 1.27-alpine); Dockerfile do backend, reverse
+                                proxy /api, host e release produtivos não confirmados</td>
+                            <td>Não associar automaticamente a EC2, ECS ou outro serviço sem evidência operacional</td>
                         </tr>
                     </tbody>
                 </table>
@@ -1648,7 +1918,7 @@
                 <p class="">O registro de unhealthy em Indicadores é histórico e foi associado à diferença entre bind do
                     servidor e endereço do healthcheck. É um ponto de acompanhamento operacional, não uma afirmação de
                     indisponibilidade atual.</p>
-                <h3 class=""><strong>6.2 Serviços AWS e responsabilidades</strong></h3>
+                <h3 class=""><strong>7.2 Serviços AWS e responsabilidades</strong></h3>
                 <p>
                     A infraestrutura combina serviços de computação, persistência,
                     identidade, armazenamento, execução de tarefas e gestão de credenciais.
@@ -1738,28 +2008,29 @@
                     permanece a definir no inventário operacional.</p>
                 <p class=""><strong>Entrada HTTP:</strong> os runbooks de EC2 descrevem Nginx como proxy reverso e
                     Certbot para TLS. Frontends Next normalmente usam servidor Node/standalone; DBEM e Books servem
-                    arquivos estáticos via Nginx. Portas de desenvolvimento, portas internas Docker e portas publicadas
-                    no host não são intercambiáveis.</p>
+                    arquivos estáticos via Nginx. O frontend do Gestão de Cronograma também é previsto como SPA estática
+                    em Nginx 1.27-alpine (build Node 20-alpine), mas o proxy de <code>/api</code> e o host produtivo não constam no repositório analisado.
+                    Portas de desenvolvimento, portas internas Docker e portas publicadas no host não são intercambiáveis.</p>
                 <p class=""><strong>Decisão de infraestrutura:</strong> a topologia descrita concentra a gestão de
                     aplicações e proxy nos hosts EC2. Antes de ampliar a arquitetura, confrontar carga, disponibilidade
                     exigida e esforço operacional. Cobertura por balanceamento, autoscaling, múltiplas zonas, proteção
                     de borda e recuperação precisa constar no inventário AWS para sustentar essa decisão.</p>
                 <p class="reference">Fontes: baseline operacional, estado mais recente, deploy de Editais, deploy de
                     Books, gatilho SAEP, infra Esplanada.</p>
-                <h2 id="sec-7" class="major"><strong>7. Bancos, arquivos e fluxos de dados</strong></h2>
+                <h2 id="sec-8" class="major"><strong>8. Bancos, arquivos e fluxos de dados</strong></h2>
                 <p class="section-intro">
                     A camada de dados do portfólio combina persistência relacional, armazenamento
                     de objetos, planilhas operacionais, bases especializadas e mecanismos de
                     indexação voltados à recuperação de contexto. PostgreSQL é a tecnologia
                     predominante nos sistemas transacionais e de identidade, mas coexistem
-                    PostGIS, DynamoDB, Google Sheets e Aurora do RDS, S3 conforme as necessidades
-                    de cada domínio. Essa diversidade não representa, por si só, um problema arquitetural. O
+                    PostGIS, DynamoDB, Google Sheets, Supabase/PostgreSQL, Aurora do RDS, S3 e, no Gestão de Cronograma,
+                    definição em código e ClickUp parcial, conforme as necessidades de cada domínio. Essa diversidade não representa, por si só, um problema arquitetural. O
                     principal ponto de atenção está na forma como schemas, conexões, arquivos,
                     índices e fontes externas são compartilhados, versionados e operados entre
                     diferentes produtos. A matriz abaixo consolida os principais mecanismos de
                     persistência identificados no levantamento.
                 </p>
-                <h3 class=""><strong>7.1 Matriz de persistência</strong></h3>
+                <h3 class=""><strong>8.1 Matriz de persistência</strong></h3>
 <table data-table="10" class="cols-4">
                     <colgroup>
                         <col style="width:18%">
@@ -1779,7 +2050,7 @@
                         <tr>
                             <td>Identidade e permissões corporativas</td>
                             <td>PostgreSQL; users, convites, permissões de plataformas e geográficas</td>
-                            <td>Hub/broker, Admin e plataformas conforme fluxo; pg, Drizzle, Prisma, psycopg e JPA</td>
+                            <td>Hub/broker, Admin, plataformas conforme fluxo e Gestão de Cronograma (login); pg, Drizzle, Prisma, psycopg e JPA</td>
                             <td>SQL, schemas de aplicação e scripts distribuídos</td>
                         </tr>
                         <tr>
@@ -1857,6 +2128,30 @@
                             <td>Backend FastAPI: ingestão por upload e consulta /query; embeddings bge-m3</td>
                             <td>Ingestão documental no repositório; schema relacional corporativo não identificado</td>
                         </tr>
+                        <tr>
+                            <td>Gestão de Cobranças / recebíveis</td>
+                            <td>PostgreSQL/Supabase: profiles, projects, receivables, catálogos de fase e etapa,
+                                audit_logs, sync_runs, sync_queue, sheet_competence_map e legacy_code_mapping; views
+                                v_projects_enriched, v_receivables_enriched e v_data_quality_issues</td>
+                            <td>Server Components e serviços sobre as views; mutações por RPCs SECURITY DEFINER; Google
+                                Sheets como fonte legada via Edge Functions</td>
+                            <td>Schema e RLS no projeto Supabase; escrita direta nas tabelas críticas é evitada</td>
+                        </tr>
+                        <tr>
+                            <td>Painel Instituições</td>
+                            <td>PostgreSQL TEMQV; Nexus somente leitura para autenticação</td>
+                            <td>TanStack server functions</td>
+                            <td>Em desenvolvimento (Programa de Estágio)</td>
+                        </tr>
+                        <tr>
+                            <td>Gestão de Cronograma</td>
+                            <td>PostgreSQL corporativo para autenticação; softwares, sprints e tarefas parcialmente
+                                definidos em código; ClickUp para GoPro2, EscreveAI e Innova Coin</td>
+                            <td>FastAPI (psycopg 3 no login; API ClickUp com cache em memória ~5 min); frontend consome
+                                GET /softwares, /stats e detalhe de sprint</td>
+                            <td>Sem persistência relacional canônica das atividades; dois sistemas no mesmo dashboard
+                                podem ter origens distintas</td>
+                        </tr>
                     </tbody>
                 </table>
                 <p class=""><strong>Versões dos bancos:</strong> versões exatas de RDS/PostGIS permanecem a complementar
@@ -1866,7 +2161,7 @@
                     identidade. O guia de Editais prevê duas databases na mesma instância: isso separa organização e
                     permissões, mas mantém capacidade e falhas da instância compartilhadas. A diretoria deve distinguir
                     separação de dados de isolamento de infraestrutura.</p>
-                <h3 class=""><strong>7.2 Fluxos relevantes para operação</strong></h3>
+                <h3 class=""><strong>8.2 Fluxos relevantes para operação</strong></h3>
 <figure class="diagram" data-diagram="fluxos">
                     <figcaption>Dados operacionais · principais cadeias de atualização</figcaption><svg
                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 315" role="img"
@@ -1926,7 +2221,12 @@
                 </figure>
                 <p class="">O ETL comercial e Indicadores usam Google Sheets, mas <strong>não foi comprovado que apontam
                         para a mesma planilha e abas</strong>. Essa ligação não deve ser afirmada apenas pela tecnologia
-                    em comum.</p>
+                    em comum. O Gestão de Cobranças também se relaciona a planilhas (abas mensais dos HUBs IFES e GOV),
+                    porém a aplicação consulta o PostgreSQL/Supabase; a cadeia Google Sheets ↔ Edge Functions ↔
+                    PostgreSQL ↔ Next.js está arquitetada, mas a sincronização bidirecional <strong>não está
+                    integralmente concluída</strong>. No Gestão de Cronograma, a API ClickUp alimenta apenas parte das
+                    iniciativas; o restante permanece no código do backend — não há sincronização automática de todo o
+                    dashboard.</p>
                 <table data-table="11" class="cols-4">
                     <colgroup>
                         <col style="width:18%">
@@ -1973,14 +2273,33 @@
                             <td>Indexação na base Aurora do RDS e recuperação de contexto para geração</td>
                             <td>POST /upload, /upload-zip e /query no backend documentado</td>
                         </tr>
+                        <tr>
+                            <td>Sheets ↔ Gestão de Cobranças</td>
+                            <td>Não consolidado como rotina automática de produção</td>
+                            <td>Importação, sincronização por hash, write-back e reconciliação financeira</td>
+                            <td>Arquitetura e health-check documentados; Fase 3 ainda parcial (importação, conflitos e
+                                write-back não concluídos)</td>
+                        </tr>
+                        <tr>
+                            <td>ClickUp → Gestão de Cronograma</td>
+                            <td>Sob demanda, com cache em memória de cerca de cinco minutos</td>
+                            <td>Normalização de tarefas/subtarefas no modelo Software → Sprint → Task</td>
+                            <td>Cobertura parcial (GoPro2, EscreveAI e Innova Coin); demais iniciativas no código</td>
+                        </tr>
                     </tbody>
                 </table>
                 <p class=""><strong>Indicadores operacionais dos pipelines:</strong> último sucesso, duração, volume
                     processado, erros e defasagem dos dados publicados. O agendamento representa a cadência prevista; a
                     atualização entregue ao usuário deve ser medida separadamente.</p>
-                <h2 id="sec-8" class="major"><strong>8. Fichas técnicas por plataforma</strong></h2>
-                <h3 class="profile"><strong>8.1 Hub Innovatis e broker de autenticação</strong></h3>
+                <h2 id="sec-9" class="major"><strong>9. Fichas técnicas por plataforma</strong></h2>
+                <p class="">As fichas abaixo cobrem sistemas em produção e em desenvolvimento. O Programa de Estágio
+                    aparece como origem e governança nas fichas 9.16 e 9.17, não como capítulo separado. O status
+                    operacional de cada produto está também no inventário (seção 4) e na seção 2. Stacks e descrições de
+                    outros sistemas eventualmente presentes no Gestão de Cronograma não atualizam as fichas correspondentes:
+                    a fonte técnica principal permanece o repositório de cada produto.</p>
+                <h3 class="profile"><strong>9.1 Hub Innovatis e broker de autenticação</strong></h3>
                 <p class="executive-link"><a class="executive-button" href="executivos/hub.html" target="_blank" rel="noopener">Abrir relatório executivo do Hub Innovatis</a></p>
+                <p class=""><strong>Status operacional:</strong> produção.</p>
                 <p class=""><strong>Papel:</strong> ponto de entrada corporativo e infraestrutura compartilhada de
                     acesso. O catálogo apresenta plataformas conforme permissões do usuário.</p>
                 <p class=""><strong>Arquitetura:</strong> Next.js mantém interface, sessão e rotas de autenticação. O
@@ -1997,8 +2316,9 @@
                     cadastro de permissões permanece relevante mesmo após autenticação pelo Cognito.</p>
                 <p class="reference"><strong>Referências técnicas:</strong> estado, manifesto, broker, persistência,
                     infra.</p>
-                <h3 class="profile"><strong>8.2 Admin Console</strong></h3>
+                <h3 class="profile"><strong>9.2 Admin Console</strong></h3>
                 <p class="executive-link"><a class="executive-button" href="executivos/admin-console.html" target="_blank" rel="noopener">Abrir relatório executivo do Admin Console</a></p>
+                <p class=""><strong>Status operacional:</strong> produção.</p>
                 <p class=""><strong>Papel:</strong> administração de usuários, convites, permissões por plataforma e
                     município, auditoria de acessos e monitoramento de atividade. É uma superfície de administração com
                     impacto transversal.</p>
@@ -2016,8 +2336,9 @@
                     sessão central pelo botão de saída do Admin.</p>
                 <p class="reference"><strong>Referências técnicas:</strong> visão geral, manifesto, schema, cliente
                     central.</p>
-                <h3 class="profile"><strong>8.3 Nexus</strong></h3>
+                <h3 class="profile"><strong>9.3 Nexus</strong></h3>
                 <p class="executive-link"><a class="executive-button" href="executivos/nexus.html" target="_blank" rel="noopener">Abrir relatório executivo do Nexus</a></p>
+                <p class=""><strong>Status operacional:</strong> produção.</p>
                 <figure class="diagram diagram-photo" data-diagram="nexus">
                     <figcaption>Nexus · arquitetura de aplicação e dados</figcaption>
                     <img src="diagramas_sistemas/diagrama_nexus.png"
@@ -2042,8 +2363,9 @@
                     catálogo.</p>
                 <p class="reference"><strong>Referências técnicas:</strong> manifesto, schema, serviço S3, rotas Google,
                     Dockerfile.</p>
-                <h3 class="profile"><strong>8.4 SAEP</strong></h3>
+                <h3 class="profile"><strong>9.4 SAEP</strong></h3>
                 <p class="executive-link"><a class="executive-button" href="executivos/saep.html" target="_blank" rel="noopener">Abrir relatório executivo da SAEP</a></p>
+                <p class=""><strong>Status operacional:</strong> produção.</p>
                 <figure class="diagram diagram-photo" data-diagram="saep">
                     <figcaption>SAEP · ingestão, processamento e consulta</figcaption>
                     <img src="diagramas_sistemas/diagrama_saep.png"
@@ -2071,7 +2393,8 @@
                     assume redução de custos ou completude produtiva a partir do README.</p>
                 <p class="reference"><strong>Referências técnicas:</strong> API, consulta de dados, acionamento Fargate,
                     coleta, dependências.</p>
-                <h3 class="profile"><strong>8.5 DBEM</strong></h3>
+                <h3 class="profile"><strong>9.5 DBEM</strong></h3>
+                <p class=""><strong>Status operacional:</strong> produção.</p>
                 <p class=""><strong>Papel:</strong> portal autenticado para dashboards Power BI.</p>
                 <p class=""><strong>Arquitetura:</strong> React/Vite, React Router <strong>7.10.0</strong>, Power BI
                     client <strong>2.23.9</strong> e API Spring Boot 3.2.0. O backend aplica autenticação e autorização
@@ -2086,8 +2409,9 @@
                     verificados. A divergência Java 17/21 exige identificar qual receita gera a imagem ativa.</p>
                 <p class="reference"><strong>Referências técnicas:</strong> POM, manifesto frontend, deploy unificado,
                     autenticação central.</p>
-                <h3 class="profile"><strong>8.6 GoPro</strong></h3>
+                <h3 class="profile"><strong>9.6 GoPro</strong></h3>
                 <p class="executive-link"><a class="executive-button" href="executivos/gopro.html" target="_blank" rel="noopener">Abrir relatório executivo da GoPro</a></p>
+                <p class=""><strong>Status operacional:</strong> produção / evolução (módulos ainda parciais).</p>
                 <figure class="diagram diagram-photo" data-diagram="gopro">
                     <figcaption>GoPro · camadas de execução e persistência</figcaption>
                     <img src="diagramas_sistemas/diagrama_gopro.png"
@@ -2115,8 +2439,9 @@
                     devem ser apresentados como recursos ponta a ponta concluídos.</p>
                 <p class="reference"><strong>Referências técnicas:</strong> estado, arquitetura, dados, POM, exemplo de
                     endpoint incompleto.</p>
-                <h3 class="profile"><strong>8.7 Indicadores 2026</strong></h3>
+                <h3 class="profile"><strong>9.7 Indicadores 2026</strong></h3>
                 <p class="executive-link"><a class="executive-button" href="executivos/indicadores-2026.html" target="_blank" rel="noopener">Abrir relatório executivo do Indicadores 2026</a></p>
+                <p class=""><strong>Status operacional:</strong> produção / evolução.</p>
                 <p class=""><strong>Papel:</strong> painel de metas e KPIs corporativos por área, com consolidação de
                     faturamento e funil comercial.</p>
 <p class=""><strong>Arquitetura:</strong> Next.js, React, Recharts e integração Google Sheets. Serviços
@@ -2135,8 +2460,9 @@
                     auditoria.</p>
                 <p class="reference"><strong>Referências técnicas:</strong> manifesto, mapper, login, Dockerfile,
                     arquitetura documentada.</p>
-                <h3 class="profile"><strong>8.8 Comunidade InnovaNation</strong></h3>
+                <h3 class="profile"><strong>9.8 Comunidade InnovaNation</strong></h3>
                 <p class="executive-link"><a class="executive-button" href="executivos/comunidade-innovanation.html" target="_blank" rel="noopener">Abrir relatório executivo da Comunidade InnovaNation</a></p>
+                <p class=""><strong>Status operacional:</strong> produção.</p>
                 <p class=""><strong>Papel:</strong> inscrição pública, termos de aceite, pré-cadastro, submissão de
                     propostas de edital e avaliação administrativa.</p>
                 <p class=""><strong>Arquitetura:</strong> Next.js full-stack com PostgreSQL/pg. Há pool do banco de
@@ -2155,8 +2481,10 @@
                     registros presentes no banco e ausentes em Sheets/n8n.</p>
                 <p class="reference"><strong>Referências técnicas:</strong> README, banco produto, banco identidade,
                     inscrições, CI.</p>
-                <h3 class="profile"><strong>8.9 Innova Coin</strong></h3>
+                <h3 class="profile"><strong>9.9 Innova Coin</strong></h3>
                 <p class="executive-link"><a class="executive-button" href="executivos/innovacoin.html" target="_blank" rel="noopener">Abrir relatório executivo do Innova Coin</a></p>
+                <p class=""><strong>Status operacional:</strong> produção / evolução (host e rotina de migration a
+                    completar no inventário operacional).</p>
                 <p class=""><strong>Papel:</strong> consulta e administração de bonificações de heads e colaboradores,
                     incluindo parcelas, saldos e valores Caju.</p>
                 <p class=""><strong>Arquitetura:</strong> Next.js full-stack, PostgreSQL via pg <strong>8.20.0</strong>,
@@ -2173,8 +2501,10 @@
                     produtos.</p>
                 <p class="reference"><strong>Referências técnicas:</strong> manifesto, heads e regras, parcelas,
                     Dockerfile.</p>
-<h3 class="profile"><strong>8.10 Innova Books</strong></h3>
+<h3 class="profile"><strong>9.10 Innova Books</strong></h3>
                 <p class="executive-link"><a class="executive-button" href="executivos/innovabooks.html" target="_blank" rel="noopener">Abrir relatório executivo do Innova Books</a></p>
+                <p class=""><strong>Status operacional:</strong> produção / evolução (instância de hospedagem a
+                    identificar).</p>
                 <p class=""><strong>Papel:</strong> transformar relatório PDF em ebook editorial, permitir edição e
                     exportar PDF ou documento Gamma.</p>
                 <p class=""><strong>Arquitetura:</strong> SPA React/Vite → Nginx → FastAPI. O backend extrai texto com
@@ -2196,8 +2526,9 @@
                     inspeção não realizou tentativa de acesso em produção.</p>
                 <p class="reference"><strong>Referências técnicas:</strong> guia técnico, rotas, modelos, requirements,
                     deploy.</p>
-                <h3 class="profile"><strong>8.11 Central de Editais</strong></h3>
+                <h3 class="profile"><strong>9.11 Central de Editais</strong></h3>
                 <p class="executive-link"><a class="executive-button" href="executivos/editais.html" target="_blank" rel="noopener">Abrir relatório executivo da Central de Editais</a></p>
+                <p class=""><strong>Status operacional:</strong> produção.</p>
                 <p class=""><strong>Papel:</strong> consolidar editais e fontes públicas, monitorar publicações,
                     classificar oportunidades e oferecer similaridade semântica.</p>
                 <p class=""><strong>Arquitetura:</strong> quatro serviços principais: web Next.js, API FastAPI, worker
@@ -2221,8 +2552,11 @@
                     do repositório não corresponde a uma simples aplicação de teste.</p>
                 <p class="reference"><strong>Referências técnicas:</strong> README, deploy, fila, similaridade, ranker,
                     CI.</p>
-                <h3 class="profile"><strong>8.12 Esplanada 4.0</strong></h3>
+                <h3 class="profile"><strong>9.12 Esplanada 4.0</strong></h3>
                 <p class="executive-link"><a class="executive-button" href="executivos/esplanada-4-0.html" target="_blank" rel="noopener">Abrir relatório executivo da Esplanada 4.0</a></p>
+                <p class=""><strong>Status operacional:</strong> em desenvolvimento / implantação. Não tratar como
+                    produção consolidada: login, árvore, histórico e pendências existem; autenticação produtiva e
+                    provisionamento completo dos serviços ainda precisam ser concluídos.</p>
 <figure class="diagram" data-diagram="esplanada">
                     <figcaption>Esplanada 4.0 · serviços, fontes e estágio de implantação</figcaption><svg
                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 380" role="img"
@@ -2302,7 +2636,8 @@
                     autenticação, empacotamento/deploy e aceite dos módulos.</p>
                 <p class="reference"><strong>Referências técnicas:</strong> manifesto raiz, stack CDK, árvore,
                     histórico/admin, credenciais dev, sync.</p>
-                <h3 class="profile"><strong>8.13 Integração Pipedrive → Google Sheets</strong></h3>
+                <h3 class="profile"><strong>9.13 Integração Pipedrive → Google Sheets</strong></h3>
+                <p class=""><strong>Status operacional:</strong> produção (rotina agendada documentada).</p>
                 <p class=""><strong>Papel:</strong> sincronizar dados comerciais do Pipedrive para Sheets, com
                     enriquecimento, regras e reconciliação.</p>
                 <p class=""><strong>Arquitetura:</strong> CLI Python com main.py como orquestrador; adaptadores
@@ -2317,8 +2652,10 @@
                     requer conferência operacional.</p>
                 <p class="reference"><strong>Referências técnicas:</strong> instruções e arquitetura, spec de
                     sincronização, requirements, workflow.</p>
-                <h3 class="profile"><strong>8.14 EscreveAI</strong></h3>
+                <h3 class="profile"><strong>9.14 EscreveAI</strong></h3>
                 <p class="executive-link"><a class="executive-button" href="executivos/escreve-ai.html" target="_blank" rel="noopener">Abrir relatório executivo da EscreveAI</a></p>
+                <p class=""><strong>Status operacional:</strong> produção / evolução (host, release e modelos produtivos
+                    não confirmados neste levantamento).</p>
                 <figure class="diagram diagram-photo" data-diagram="escreveai">
                     <figcaption>EscreveAI · frontend, recuperação de contexto e geração</figcaption>
                     <img src="diagramas_sistemas/diagrama_escreveai.png"
@@ -2332,9 +2669,10 @@
                     previamente executados pela Innovatis.</p>
                 <p class=""><strong>Arquitetura:</strong> monorepo com separação entre frontend, backend de IA,
                     infraestrutura, documentação, contratos compartilhados e scripts operacionais. O frontend está em
-                    <code>apps/escreve-ai</code> e o backend em <code>apps/backend-ia</code>.</p>
-                <p class=""><strong>Frontend:</strong> Next.js <strong>16.2.3</strong> com App Router e Turbopack, React
-                    19, TypeScript, Tailwind CSS v4, shadcn/ui/base-ui e editor TipTap. A aplicação possui dashboard,
+                    <code>apps/front-end</code> e o backend em <code>apps/backend-ia</code>.</p>
+                <p class=""><strong>Frontend:</strong> pacote <code>escreve-ai@0.1.0</code>; Next.js <strong>16.2.3</strong>
+                    com App Router e Turbopack, React <strong>19.2.4</strong>, TypeScript <strong>5.9.3</strong>,
+                    Tailwind CSS <strong>4.3.3</strong>, shadcn/Base UI e editor TipTap. A aplicação possui dashboard,
                     editor de projetos, templates, área administrativa e gestão da base de conhecimento. Rotas
                     principais: <code>/home</code>, <code>/escrever-projeto</code>, <code>/modelos-templates</code>,
                     <code>/admin-ops</code> e <code>/admin-ops/base-conhecimento</code>.</p>
@@ -2347,35 +2685,77 @@
                 <p class=""><strong>Dados e recuperação:</strong> base de conhecimento documental indexada para
                     recuperação de contexto. No estado documentado no repositório, o backend utiliza Aurora persistido
                     no banco do Aurora.</p>
-                <p class=""><strong>Operação:</strong> backend executável via Uvicorn na porta 8000. O repositório
-                    possui estrutura própria para Docker, AWS, scripts de ingestão e documentação técnica. Host, release
-                    e configuração produtivos não foram confirmados neste levantamento.</p>
+                <p class=""><strong>Operação:</strong> o frontend possui Dockerfile multi-stage com
+                    <code>node:20-bookworm-slim</code> (deps, builder e runtime), instalação explícita do npm
+                    <strong>11.6.2</strong> antes do <code>npm ci</code> e execução Next em modo standalone na porta
+                    3000. O backend executa via Uvicorn na porta 8000. O repositório possui estrutura para Docker, AWS,
+                    scripts de ingestão e documentação técnica. Host, release e configuração produtivos não foram
+                    confirmados neste levantamento.</p>
                 <p class=""><strong>Atenção:</strong> a disponibilidade funcional depende do frontend, do backend de IA,
                     da base de conhecimento e de provedores externos de LLM. Como o projeto está em evolução,
                     infraestrutura, persistência e modelos usados em produção devem ser confirmados antes de serem
                     tratados como estado operacional definitivo.</p>
                 <p class="reference"><strong>Referências técnicas:</strong> README_projeto.md, CLAUDE.md,
-                    <code>apps/escreve-ai</code>, <code>apps/backend-ia</code>, <code>docs/</code>, <code>infra/</code>,
+                    <code>apps/front-end</code>, <code>apps/backend-ia</code>, <code>docs/</code>, <code>infra/</code>,
                     <code>packages/shared</code> e <code>scripts/</code>.</p>
-                <h3 class="profile"><strong>8.15 Cronograma Inovação — lacuna de cobertura</strong></h3>
-                <p class="">Consta no catálogo do Hub com código cronograma-inovacao. O catálogo possui indicação de
-                    SSO, mas não utiliza entrada SSO no card, e o registry central não contém client correspondente.
-                    Stack, banco, hospedagem e responsável técnico permanecem a complementar no inventário desta
-                    plataforma.</p>
-                <p class="reference"><strong>Referências técnicas:</strong> catálogo, inventário transversal.</p>
-<h2 id="sec-9" class="major"><strong>9. Projetos em desenvolvimento no Programa de Estágio</strong></h2>
-                <p class="">Além das plataformas que compõem o portfólio regular da Innovatis, há sistemas
-                    desenvolvidos no âmbito do Programa de Estágio. Esses projetos são conduzidos por equipes de
-                    estagiários responsáveis pela concepção e implementação das soluções para problemas internos
-                    previamente definidos. O desenvolvimento e as alterações de código permanecem sob responsabilidade
-                    exclusiva das respectivas equipes, enquanto demais colaboradores podem atuar de forma consultiva,
-                    oferecendo orientações técnicas, sugestões, referências e apoio na resolução de dúvidas.</p>
-                <h3 class="profile"><strong>9.1 Painel Instituições / Central de Inteligência Institucional</strong></h3>
+                <h3 class="profile"><strong>9.15 Gestão de Cobranças</strong></h3>
+                <p class="executive-link"><a class="executive-button" href="executivos/gestao-de-cobrancas.html" target="_blank" rel="noopener">Abrir relatório executivo da Gestão de Cobranças</a></p>
+                <p class=""><strong>Status operacional:</strong> em desenvolvimento. Origem: portfólio interno Innovatis.
+                    A base operacional é PostgreSQL/Supabase; a integração bidirecional com Google Sheets não está
+                    concluída.</p>
+                <p class=""><strong>Papel:</strong> plataforma interna de gestão de recebíveis dos HUBs IFES e GOV,
+                    centralizando acompanhamento financeiro e operacional que anteriormente dependia diretamente das
+                    abas mensais de Google Sheets.</p>
+                <p class=""><strong>Arquitetura:</strong> aplicação Next.js <strong>15.5.25</strong> (declara
+                    ^15.2.0) com React <strong>19.2.8</strong>, TypeScript <strong>5.9.3</strong>, Tailwind CSS
+                    <strong>4.3.3</strong> e shadcn/Base UI, integrada ao Supabase. Leituras utilizam Server
+                    Components e serviços sobre views PostgreSQL; mutações utilizam Server Actions e RPCs SECURITY
+                    DEFINER. O Google Sheets é tratado por uma camada de integração própria e Edge Functions, sem acesso
+                    direto pelos componentes React. A abstração <code>ReceivablesSourceAdapter</code> desacopla o
+                    frontend da fonte externa. Cadeia documentada: Google Sheets → Sheets API → Edge Functions →
+                    Supabase/PostgreSQL → Next.js.</p>
+                <p class=""><strong>Dados:</strong> PostgreSQL/Supabase concentra projetos, recebíveis por competência
+                    mensal, perfis, catálogos de fase do projeto, situação do projeto, etapa da cobrança e situação
+                    financeira, além de auditoria, qualidade de dados e estado das sincronizações. Estruturas
+                    principais: <code>profiles</code>, <code>projects</code>, <code>receivables</code>,
+                    <code>project_stage_catalog</code>, <code>collection_status_catalog</code>,
+                    <code>audit_logs</code>, <code>sync_runs</code>, <code>sync_queue</code>,
+                    <code>sheet_competence_map</code> e <code>legacy_code_mapping</code>. Views
+                    <code>v_projects_enriched</code>, <code>v_receivables_enriched</code> e
+                    <code>v_data_quality_issues</code> calculam saldos, situação financeira, atraso e problemas de
+                    qualidade.</p>
+                <p class=""><strong>Autorização e governança:</strong> três papéis (viewer, operator e master_admin),
+                    Row Level Security, ausência de escrita direta nas tabelas críticas e mutações por RPCs que
+                    revalidam a permissão no banco. Alterações são registradas em trilha de auditoria imutável (estado
+                    anterior/posterior, campos modificados, usuário, origem e correlation ID); UPDATE e DELETE em
+                    <code>audit_logs</code> são bloqueados por trigger. Controle otimista de concorrência por
+                    <code>source_version</code> evita sobrescrita silenciosa. Alterações ligadas ao Google Sheets entram
+                    em <code>sync_queue</code> para write-back assíncrono.</p>
+                <p class=""><strong>Integrações:</strong> Google Sheets é a fonte legada prevista para importação e
+                    sincronização. A arquitetura possui adaptador específico, fila de write-back e controle de
+                    conflitos, mas a Fase 3 permanece parcialmente implementada: o health-check existe; importação,
+                    inicialização, sincronização, resolução de conflitos e demais etapas ainda não devem ser
+                    apresentadas como concluídas. A documentação prevê preview, geração de ID_COBRANCA, importação,
+                    sincronização por hash, write-back, fila, tratamento de conflitos e reconciliação financeira.</p>
+                <p class=""><strong>Operação:</strong> CI com npm ci, lint, typecheck, testes e build. O workflow está
+                    direcionado a <code>main</code>, enquanto o repositório possui <code>develop</code> como branch
+                    padrão — ponto a conciliar na operação de release. Host produtivo e projeto Supabase em produção
+                    não foram confirmados neste levantamento. Cobertura automatizada atual ainda é pequena. Não há
+                    <code>engines.node</code> no package.json nem Docker do frontend identificado no branch consultado.</p>
+                <p class=""><strong>Atenção:</strong> não apresentar a sincronização bidirecional com Google Sheets como
+                    concluída. Ampliar testes de regras financeiras, RPCs, permissões, parser/importação, idempotência e
+                    conflitos antes de tratar a integração como madura para produção. Acompanhar <code>sync_runs</code>,
+                    <code>sync_queue</code>, erros, conflitos, defasagem entre banco e planilha e data do último sync.
+                </p>
+                <p class="reference"><strong>Referências técnicas:</strong> repositório
+                    <code>tech-innovatis-admin/gestao_cobrancas</code>; schema e RPCs no projeto Supabase; documentação
+                    da Fase 3 de integração com Google Sheets.</p>
+                <h3 class="profile"><strong>9.16 Painel Instituições / Central de Inteligência Institucional</strong></h3>
                 <p class=""><strong>Papel:</strong> plataforma interna voltada à organização, gestão e análise
                     comparativa de instituições parceiras — Fundações e Institutos/IFEs.</p>
-                <p class=""><strong>Situação:</strong> em desenvolvimento no âmbito do Programa de Estágio. O README do
-                    repositório <code>tech-innovatis-admin/painel-instituicoes</code> marca o projeto como “EM
-                    DESENVOLVIMENTO”.</p>
+                <p class=""><strong>Status operacional:</strong> em desenvolvimento. <strong>Origem / governança:</strong>
+                    Programa de Estágio — concepção e código sob a equipe de estagiários responsável; demais
+                    colaboradores atuam de forma consultiva. O README marca o projeto como “EM DESENVOLVIMENTO”.</p>
                 <p class=""><strong>Funcionalidades atuais:</strong> dashboard geral, cadastro de GOVs e IFEs,
                     comparação lado a lado entre instituições, visualização detalhada do funcionamento de cada
                     instituição e área institucional.</p>
@@ -2385,33 +2765,94 @@
                     <code>src/server</code>. Apesar de o README mencionar “Next/TanStack Start”, o
                     <code>package.json</code> mostra explicitamente TanStack Start, React e Vite; o sistema não deve ser
                     classificado como Next.js.</p>
-                <p class=""><strong>Stack identificada:</strong> React 19, TypeScript, TanStack Start, TanStack Router,
-                    TanStack Query, Vite, Tailwind CSS 4, Radix UI, PostgreSQL, JWT, Zod, React Hook Form, Recharts e
-                    bibliotecas auxiliares de UI.</p>
-<p class=""><strong>Dados:</strong> usa o banco TEMQV para os dados operacionais da própria plataforma.
+                <p class=""><strong>Stack identificada:</strong> versão do pacote não declarada no
+                    <code>package.json</code> (name <code>tanstack_start_ts</code>). React <strong>19.2.8</strong>,
+                    TypeScript <strong>5.9.3</strong>, TanStack Start <strong>1.168.32</strong>, TanStack Router
+                    1.170.18, Vite <strong>8.2.1</strong> (declara ^8.2.0), Tailwind CSS <strong>4.3.3</strong>, Radix UI,
+                    PostgreSQL, JWT, Zod, React Hook Form, Recharts e bibliotecas auxiliares de UI. O Vite 8.2.1 exige
+                    Node ^20.19.0 ou &gt;=22.12.0.</p>
+                <p class=""><strong>Dados:</strong> usa o banco TEMQV para os dados operacionais da própria plataforma.
                     O banco corporativo Nexus é utilizado apenas para autenticação e em modo somente leitura.</p>
                 <p class=""><strong>Autenticação:</strong> login por email ou username, validação de senha contra o campo
                     hash da tabela <code>public.users</code> no banco Nexus e sessão assinada com JWT armazenada em
                     cookie httpOnly, com expiração de 1 dia.</p>
-                <p class=""><strong>Governança:</strong> desenvolvimento restrito à equipe de estagiários responsável;
-                    demais colaboradores atuam apenas de forma consultiva.</p>
                 <p class=""><strong>Atenção:</strong> como o sistema ainda está em desenvolvimento, arquitetura,
                     funcionalidades e infraestrutura podem mudar antes da consolidação.</p>
                 <p class="reference"><strong>Referências técnicas:</strong> README e <code>package.json</code> do
-                    repositório painel-instituicoes.</p>
-                <h3 class="profile"><strong>9.2 Monitoramento de Faturamento</strong></h3>
+                    repositório <code>tech-innovatis-admin/painel-instituicoes</code>.</p>
+                <h3 class="profile"><strong>9.17 Monitoramento de Faturamento</strong></h3>
                 <p class=""><strong>Papel:</strong> sistema em desenvolvimento para atender a uma demanda interna
                     relacionada ao monitoramento de faturamento da empresa.</p>
-                <p class=""><strong>Situação:</strong> em desenvolvimento no âmbito do Programa de Estágio.</p>
+                <p class=""><strong>Status operacional:</strong> em desenvolvimento. <strong>Origem / governança:</strong>
+                    Programa de Estágio — desenvolvimento de responsabilidade exclusiva da equipe de estagiários
+                    designada, com apoio consultivo dos demais colaboradores quando necessário.</p>
                 <p class=""><strong>Escopo funcional:</strong> a complementar após disponibilização do repositório e da
                     documentação técnica.</p>
                 <p class=""><strong>Arquitetura e stack:</strong> ainda não avaliadas. Não há acesso ao repositório neste
                     levantamento.</p>
                 <p class=""><strong>Dados e integrações:</strong> ainda não avaliados.</p>
-                <p class=""><strong>Governança:</strong> desenvolvimento de responsabilidade exclusiva da equipe de
-                    estagiários designada, com apoio consultivo dos demais colaboradores quando necessário.</p>
                 <p class=""><strong>Atenção:</strong> as informações técnicas devem ser atualizadas assim que o acesso ao
-                    repositório for liberado.</p>
+                    repositório for liberado. Não tratar o sistema como produção consolidada.</p>
+                <p class="reference"><strong>Referências técnicas:</strong> a complementar quando o repositório for
+                    disponibilizado.</p>
+                <h3 class="profile"><strong>9.18 Gestão de Cronograma</strong></h3>
+                <p class="executive-link"><a class="executive-button" href="executivos/gestao-de-cronograma.html" target="_blank" rel="noopener">Abrir relatório executivo da Gestão de Cronograma</a></p>
+                <p class=""><strong>Status operacional:</strong> produção / evolução. <strong>Origem / governança:</strong>
+                    portfólio interno de Tecnologia.</p>
+                <p class=""><strong>Papel:</strong> O Gestão de Cronograma (dashboard-atividades) é a plataforma interna
+                    de acompanhamento das atividades, cronogramas e entregas do setor de Tecnologia da Innovatis, consolidando visão por sistema, sprint e tarefa.
+                    Organiza sistemas e iniciativas, sprints, tarefas, responsáveis, prioridades, story points,
+                    percentual de tarefas concluídas, atividades em andamento, tarefas bloqueadas, principais entregas e
+                    evolução temporal das sprints. Há também visualização do Programa de Embaixadores (etapas de adoção
+                    de plataformas). É camada de consolidação e visualização, não ferramenta transacional de gestão de
+                    tarefas nem substituto completo do ClickUp.</p>
+                <p class=""><strong>Arquitetura:</strong> SPA React/Vite integrada a uma API REST Python/FastAPI. O
+                    backend agrega dados de diferentes fontes, calcula indicadores e entrega informações consolidadas ao
+                    frontend. Organização em frontend/ e backend/; em main.py concentram-se modelos, dados, integrações,
+                    métricas e endpoints. Não utiliza Next.js.</p>
+                <p class=""><strong>Frontend:</strong> pacote <code>sprint-galaxy@1.0.0</code>; React <strong>18.3.1</strong>,
+                    React DOM <strong>18.3.1</strong>, React Router DOM <strong>6.30.3</strong> (declara ^6.26.2), Vite
+                    <strong>5.4.21</strong> (declara ^5.4.8), JavaScript/JSX e Lucide React. Não há TypeScript nas
+                    dependências; @types/react existe apenas para tooling. Telas: visão geral do portfólio (entregas, plataformas, progresso,
+                    quantidade de atividades); visão por sistema (descrição, stack, tamanho da equipe, progresso,
+                    sprints, linha do tempo, situação das atividades, story points); visão por sprint (objetivo, datas,
+                    progresso, concluídas/em andamento/bloqueadas/restantes, responsável, prioridade, story points).</p>
+                <p class=""><strong>Dados:</strong> modelo Software → Sprint → Task. Atividade: título, descrição,
+                    status, responsável, prioridade e story points. Sprint: número, nome, objetivo, datas, status e
+                    conjunto de atividades. Software: nome, descrição, stack, tamanho da equipe, status e sprints.
+                    Indicadores derivados incluem progresso geral, totais de sprints e tarefas, sprints concluídas,
+                    tarefas concluídas e em andamento, story points concluídos e totais. O percentual principal é
+                    tarefas concluídas / total de tarefas × 100 — percentual de tarefas concluídas, não necessariamente
+                    execução física ou esforço. Story points não ponderam esse percentual.</p>
+                <p class=""><strong>Persistência e integrações:</strong> PostgreSQL corporativo para autenticação;
+                    informações operacionais de cronograma parcialmente definidas em código; integração parcial com a
+                    API ClickUp (listas de tarefas/subtarefas; normalização de status, prioridade, responsável, story
+                    points e datas; cache em memória de cerca de cinco minutos) para GoPro2, EscreveAI e Innova Coin. A
+                    API é orientada à leitura: GET /health, POST /auth/login, GET /softwares, GET /softwares/{id}, GET
+                    /softwares/{id}/sprints/{sprint} e GET /stats. Não foram identificados endpoints CRUD de criação ou
+                    edição de tarefas e sprints.</p>
+                <p class=""><strong>Autenticação:</strong> Login → FastAPI → PostgreSQL users → bcrypt → JWT HS256. Login
+                    por username ou e-mail; o usuário precisa ter acesso à plataforma configurada. Token em
+                    sessionStorage, enviado como Authorization: Bearer.</p>
+                <p class=""><strong>Controles no backend (não constituem auditoria de segurança):</strong> rate limiting
+                    global por IP, limite de tentativas de login, CORS configurável, headers de segurança, Swagger/OpenAPI
+                    só em desenvolvimento, autenticação obrigatória nos endpoints de dados e validação de IDs nas rotas.</p>
+                <p class=""><strong>Operação:</strong> frontend containerizado com <code>node:20-alpine</code> no build e
+                    <code>nginx:1.27-alpine</code> na execução; artefato Vite <code>/dist</code> servido na porta 80;
+                    consome o backend em /api. A configuração Nginx do frontend no repositório não contém o
+                    proxy de /api para o FastAPI. Dockerfile do backend, reverse proxy, host produtivo e release
+                    operacional ainda precisam ser confirmados no inventário de infraestrutura. Não associar
+                    automaticamente a EC2, ECS ou outro serviço sem evidência.</p>
+                <p class=""><strong>Qualidade:</strong> não foi identificada suíte automatizada de testes nem workflow de
+                    CI/CD. O frontend tem scripts de desenvolvimento, build e preview; não há scripts explícitos de test,
+                    lint ou typecheck.</p>
+                <p class=""><strong>Atenção:</strong> o Gestão de Cronograma não é fonte técnica autoritativa dos demais
+                    sistemas — em divergência, prevalece o repositório original. A origem das informações de cronograma
+                    ainda é heterogênea (código + ClickUp parcial + PostgreSQL de autenticação): dois sistemas no mesmo
+                    dashboard podem ter origens diferentes. Essa é a principal limitação de maturidade arquitetural.
+                    Evolução futura pode consolidar o ClickUp ou uma base operacional própria como fonte canônica.</p>
+                <p class="reference"><strong>Referências técnicas:</strong> repositório
+                    <code>tech-innovatis-admin/dashboard-atividades</code> (frontend/ e backend/).</p>
 <h2 id="sec-10" class="major"><strong>10. Entrega de software, qualidade e operação</strong></h2>
                 <h3 class=""><strong>10.1 Validação e publicação</strong></h3>
                 <table data-table="12" class="cols-3">
@@ -2461,9 +2902,23 @@
                         </tr>
                         <tr>
                             <td>EscreveAI</td>
-                            <td>Frontend Next.js e backend FastAPI separados; Uvicorn na porta 8000; GET /health</td>
+                            <td>Frontend Next.js (Docker Node 20-bookworm-slim, standalone porta 3000) e backend FastAPI;
+                                Uvicorn na porta 8000; GET /health</td>
                             <td>A entrega precisa publicar as duas aplicações e validar OpenAI e Claude, Groq e a base
                                 Aurora do RDS; Docker/AWS no repositório não equivalem a operação confirmada</td>
+                        </tr>
+                        <tr>
+                            <td>Gestão de Cobranças</td>
+                            <td>CI com npm ci, lint, typecheck, testes (Vitest) e build; workflow em main</td>
+                            <td>Cobertura automatizada ainda pequena; branch padrão develop diverge do gatilho em main
+                                e deve ser conciliada na promoção de versões</td>
+                        </tr>
+                        <tr>
+                            <td>Gestão de Cronograma</td>
+                            <td>Scripts de desenvolvimento, build e preview no frontend; sem test, lint, typecheck,
+                                suíte automatizada ou CI/CD identificados</td>
+                            <td>A entrega e a qualidade dependem de validação manual; oportunidade de evolução técnica
+                            </td>
                         </tr>
                         <tr>
                             <td>Publicação EC2</td>
@@ -2502,8 +2957,9 @@
                     <tbody>
                         <tr>
                             <td>Acesso</td>
-                            <td>Sucesso de login, falhas de callback, revogação e latência de autenticação</td>
-                            <td>Hub/broker, Admin e consumidores SSO</td>
+                            <td>Sucesso de login, falhas de callback, revogação e latência de autenticação; no Gestão de
+                                Cronograma, tentativas de login e rate limiting por IP</td>
+                            <td>Hub/broker, Admin, consumidores SSO e Gestão de Cronograma</td>
                         </tr>
                         <tr>
                             <td>Disponibilidade</td>
@@ -2512,13 +2968,19 @@
                         </tr>
                         <tr>
                             <td>Atualização de dados</td>
-                            <td>Última coleta, jobs com erro, atraso de processamento e data de referência</td>
-                            <td>SAEP, Editais, Esplanada, Indicadores, ETL comercial e EscreveAI</td>
+                            <td>Última coleta, jobs com erro, atraso de processamento, data de referência; no Gestão de
+                                Cobranças, sync_runs, sync_queue, erros de sincronização, conflitos, defasagem
+                                banco–planilha e data do último sync; no Gestão de Cronograma, cobertura ClickUp versus
+                                dados em código, idade do cache (~5 min) e consistência entre iniciativas no mesmo
+                                dashboard</td>
+                            <td>SAEP, Editais, Esplanada, Indicadores, ETL comercial, EscreveAI, Gestão de Cobranças e
+                                Gestão de Cronograma</td>
                         </tr>
                         <tr>
                             <td>Recuperação</td>
                             <td>Backups, restaurações testadas, retenção e tempo de retorno</td>
-                            <td>Bancos de identidade/produto, documentos e arquivos S3</td>
+                            <td>Bancos de identidade/produto, documentos, arquivos S3 e o projeto Supabase do Gestão de
+                                Cobranças</td>
                         </tr>
                     </tbody>
                 </table>
@@ -2603,6 +3065,21 @@
                             </td>
                             <td>Medir custo por resultado, tempo e taxa de revisão humana</td>
                         </tr>
+                        <tr>
+                            <td>PostgreSQL/Supabase operacional e Sheets legado (Gestão de Cobranças)</td>
+                            <td>Reduz o acoplamento do frontend à estrutura de células e concentra regras no banco</td>
+                            <td>Exige governança de sincronização, reconciliação, fila e tratamento de conflitos</td>
+                            <td>Concluir a Fase 3 e medir defasagem, conflitos e último sync antes de tratar a
+                                integração como madura</td>
+                        </tr>
+                        <tr>
+                            <td>Fontes híbridas de cronograma (código + ClickUp parcial + PostgreSQL de autenticação)
+                            </td>
+                            <td>Permite publicar um dashboard gerencial sem exigir CRUD interno de tarefas</td>
+                            <td>Não há fonte única de verdade; iniciativas no mesmo painel podem divergir de origem e
+                                atualidade</td>
+                            <td>Consolidar ClickUp ou base operacional própria como fonte canônica das atividades</td>
+                        </tr>
                     </tbody>
                 </table>
                 <h2 id="sec-11" class="major"><strong>11. Agenda de decisões para a diretoria</strong></h2>
@@ -2628,8 +3105,8 @@
                         <tr>
                             <td><strong>1</strong></td>
                             <td>Definir governança da identidade corporativa</td>
-                            <td>Broker/Cognito e cadastro PostgreSQL afetam várias plataformas; legado e SSO coexistem
-                            </td>
+                            <td>Broker/Cognito e cadastro PostgreSQL afetam várias plataformas; legado, SSO e JWT
+                                próprio (GoPro e Gestão de Cronograma) coexistem</td>
                             <td>Responsável pelo serviço, contrato de autorização, política de sessão/revogação e
                                 critérios para concluir a transição</td>
                         </tr>
@@ -2654,8 +3131,8 @@
                         <tr>
                             <td><strong>5</strong></td>
                             <td>Gerir atualização dos produtos de inteligência</td>
-                            <td>SAEP, Editais, Indicadores e a base RAG da EscreveAI dependem de ingestão ou de
-                                provedores externos</td>
+                            <td>SAEP, Editais, Indicadores, a base RAG da EscreveAI, o Gestão de Cobranças e o Gestão de
+                                Cronograma dependem de ingestão, provedores externos, planilha ou ClickUp parcial</td>
                             <td>Metas de atualização, monitoramento de qualidade e reprocessamento com responsável</td>
                         </tr>
                         <tr>
@@ -2667,8 +3144,10 @@
                         <tr>
                             <td><strong>7</strong></td>
                             <td>Separar conclusão de produto de expansão</td>
-                            <td>GoPro tem módulos incompletos; Esplanada exige fechamento operacional</td>
-                            <td>Roadmap que distingue estabilização, entrega pendente e novas capacidades</td>
+                            <td>GoPro tem módulos incompletos; Esplanada, Gestão de Cobranças, Painel Instituições e
+                                Monitoramento de Faturamento ainda não são produção consolidada</td>
+                            <td>Roadmap que distingue estabilização, entrega pendente, desenvolvimento e novas
+                                capacidades</td>
                         </tr>
                         <tr>
                             <td><strong>8</strong></td>
@@ -2688,7 +3167,10 @@
                 <p class="list-item"><strong>Dados e continuidade:</strong> levantar último sucesso das coletas,
                     defasagem entregue e evidência de restauração dos bancos/documentos.</p>
                 <p class="list-item"><strong>Cobertura do portfólio:</strong> completar arquitetura e responsável do
-                    Cronograma Inovação; confirmar host, persistência e modelos produtivos da EscreveAI.</p>
+                    Gestão de Cronograma (backend, proxy /api, host/release e fonte canônica das atividades); confirmar host,
+                    persistência e modelos produtivos da EscreveAI; confirmar host
+                    e maturidade da sincronização Sheets do Gestão de Cobranças; definir critérios de entrada em
+                    produção do Painel Instituições e obter o repositório do Monitoramento de Faturamento.</p>
                 <h3 class=""><strong>Critérios para priorizar investimento</strong></h3>
                 <p class=""><strong>Disponibilidade e alcance:</strong> quantos processos e produtos param com a falha
                     do componente? <strong>Valor do dado:</strong> qual o impacto de perda ou defasagem? <strong>Esforço
